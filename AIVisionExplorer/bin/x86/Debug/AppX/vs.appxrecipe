@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>aa77045f-b793-47ba-8fe2-481d1bbd2ce4</PackageIdentityName>
     <PackageIdentityPublisher>CN=codes</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>669E42435AD5C447CBB1A8CAF8C46DF048222C9784B5E46F1440CC75876A1483</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>aa77045f-b793-47ba-8fe2-481d1bbd2ce4_1.0.0.0_x86__7pv1ec2mtn5j4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>aa77045f-b793-47ba-8fe2-481d1bbd2ce4_7pv1ec2mtn5j4!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T18:41:24.011</Modified>
+      <Modified>2018-06-03T20:12:57.689</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\AIVisionExplorer.exe">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\AIVisionExplorer.exe">
       <PackagePath>entrypoint\AIVisionExplorer.exe</PackagePath>
-      <Modified>2018-06-03T18:41:21.717</Modified>
+      <Modified>2018-06-03T20:12:55.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -507,69 +507,69 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-12T06:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\AppIcon.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\AppIcon.scale-100.png">
       <PackagePath>Assets\AppIcon.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T17:56:37.550</Modified>
+      <Modified>2018-06-03T19:13:40.645</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T17:56:37.567</Modified>
+      <Modified>2018-06-03T19:13:40.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\MediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\MediumTile.scale-100.png">
       <PackagePath>Assets\MediumTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T17:56:37.579</Modified>
+      <Modified>2018-06-03T19:13:40.649</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T17:56:37.590</Modified>
+      <Modified>2018-06-03T19:13:40.650</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T17:56:37.600</Modified>
+      <Modified>2018-06-03T19:13:40.652</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T17:56:37.611</Modified>
+      <Modified>2018-06-03T19:13:40.654</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\WideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Assets\WideTile.scale-100.png">
       <PackagePath>Assets\WideTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T17:56:37.619</Modified>
+      <Modified>2018-06-03T19:13:40.655</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-06-03T17:56:37.769</Modified>
+      <Modified>2018-06-03T19:13:40.687</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\AIVisionExplorer.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\AIVisionExplorer.xr.xml">
       <PackagePath>AIVisionExplorer.xr.xml</PackagePath>
       <Modified>2018-06-03T18:03:58.699</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-06-03T18:02:07.421</Modified>
+      <Modified>2018-06-03T20:12:55.033</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-06-03T18:41:21.251</Modified>
+      <Modified>2018-06-03T20:12:55.034</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-20T05:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-03T18:41:23.205</Modified>
+      <Modified>2018-06-03T20:12:56.903</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\Source\Repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\Core\AIVisionExplorer.exe">
+    <AppxPackagedFile Include="C:\Users\Wendmagegn Sahle\source\repos\DEV306x_AILABS-Source\AIVisionExplorer\bin\x86\Debug\Core\AIVisionExplorer.exe">
       <PackagePath>AIVisionExplorer.exe</PackagePath>
-      <Modified>2018-06-03T18:41:23.997</Modified>
+      <Modified>2018-06-03T20:12:57.671</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
