@@ -24,7 +24,8 @@ namespace AIVisionExplorer
     {
         public MainPage()
         {
-            this.InitializeComponent();             
+            this.InitializeComponent();
+            this.DataContext = App.ViewModel;
         }
     }
 }

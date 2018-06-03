@@ -8,8 +8,105 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Add" Label="Add Image" Command="{Binding BrowseForImageCommand}"/>
+        </CommandBar>
+    </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-         
+        <Grid Margin="40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Text="Developing AI Vision Apps with Microsoft Cognitive Vision Services"/>
+                <TextBlock FontWeight="SemiLight" Text="Experiment with Microsoft Cognitive Vision Services Computer Vision services and APIs."/>
+            </StackPanel>
+            <Pivot Margin="10" Grid.Row="1">
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="SelectionChanged">
+                        <Core:InvokeCommandAction Command="{Binding CourseChangedCommand}"/>
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+                <PivotItem>
+                    <PivotItem.Header>
+                        <TextBlock Text="Computer Vision"/>
+                    </PivotItem.Header>
+                    <Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="{Binding CurrentImage, Converter={StaticResource HasContextToVisibilityConverter}}" BorderBrush="Gray" BorderThickness="1">
+                                <Image Stretch="UniformToFill" HorizontalAlignment="Left" Source="{Binding CurrentImage.Url}"/>
+                            </Border>
+                            <Grid Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="{Binding CurrentImage, Converter={StaticResource HasContextToVisibilityConverter}, FallbackValue=Collapsed}" VerticalAlignment="Bottom" RequestedTheme="Dark" Background="#CC000000">
+                                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                    <AppBarButton Command="{Binding CurrentImage.AnalyzeImageCommand}" Label="Analyze">
+                                        <AppBarButton.Icon>
+                                            <FontIcon Glyph=""/>
+                                        </AppBarButton.Icon>
+                                    </AppBarButton>
+                                </StackPanel>
+                            </Grid>
+                            <Grid RequestedTheme="Dark" Visibility="{Binding CurrentImage.Tags, Converter={StaticResource HasListToVisibilityConverter}, FallbackValue=Collapsed}" Grid.Row="0" Margin="5" Width="200" Background="#CC000000" Grid.Column="1">
+                                <ScrollViewer HorizontalScrollBarVisibility="Hidden" HorizontalScrollMode="Disabled">
+                                    <StackPanel Width="160" Margin="20">
+                                        <TextBlock FontWeight="SemiLight" Text="DESCRIPTION"/>
+                                        <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="{Binding CurrentImage.Description}"/>
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="TAGS"/>
+                                        <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="{Binding CurrentImage.Tags, Converter={StaticResource ListToLabelConverter}}"/>
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="IS RACY?"/>
+                                        <TextBlock FontWeight="SemiBold">                                        
+                                  <Run Text="{Binding CurrentImage.IsRacy}"/>
+                                  <Run Text="("/><Run Text="{Binding CurrentImage.RacyScore, Converter={StaticResource DoubleToPercentageConverter}}"/><Run Text=")"/>
+                                        </TextBlock>
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="IS ADULT?"/>
+                                        <TextBlock FontWeight="SemiBold">                                        
+                                  <Run Text="{Binding CurrentImage.IsAdult}"/>
+                                  <Run Text="("/><Run Text="{Binding CurrentImage.AdultScore, Converter={StaticResource DoubleToPercentageConverter}}"/><Run Text=")"/>
+                                        </TextBlock>
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="IS LINE DRAWING?"/>
+                                        <TextBlock FontWeight="SemiBold">                                        
+                                   <Run Text="{Binding CurrentImage.IsLineDrawing}"/>
+                                        </TextBlock>
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="IS CLIP ART?"/>
+                                        <TextBlock FontWeight="SemiBold">                                        
+                                   <Run Text="{Binding CurrentImage.IsClipart}"/>
+                                        </TextBlock>
+
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="COLORS"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border Margin="0,5,5,0" HorizontalAlignment="Left" Width="30" Height="30" BorderBrush="White" BorderThickness="1" Background="{Binding CurrentImage.AccentColor}" />
+                                            <Border Margin="0,5,5,0" HorizontalAlignment="Left" Width="30" Height="30" BorderBrush="White" BorderThickness="1" Background="{Binding CurrentImage.ForegroundColor}" />
+                                            <Border Margin="0,5,5,0" HorizontalAlignment="Left" Width="30" Height="30" BorderBrush="White" BorderThickness="1" Background="{Binding CurrentImage.BackgroundColor}" />
+                                        </StackPanel>
+
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="DIMENSIONS"/>
+                                        <TextBlock FontWeight="SemiBold">                                        
+                                  <Run Text="{Binding CurrentImage.ImageWidth}"/>
+                                  <Run Text="x"/>
+                                  <Run Text="{Binding CurrentImage.ImageHeight}"/>
+                                        </TextBlock>
+
+                                        <TextBlock Margin="0,10,0,0" FontWeight="SemiLight" Text="TYPE"/>
+                                        <TextBlock FontWeight="SemiBold">                                        
+                                   <Run Text="{Binding CurrentImage.ImageFormat}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </Grid>
+                        </Grid>
+                        <ProgressRing IsActive="{Binding CurrentImage.IsBusy}" IsEnabled="{Binding CurrentImage.IsBusy}" Width="200" Height="200" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+        </Grid>
     </Grid>
 </Page>

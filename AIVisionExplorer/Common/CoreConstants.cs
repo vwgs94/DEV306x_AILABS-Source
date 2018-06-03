@@ -8,8 +8,8 @@ namespace AIVisionExplorer.Common
 {
     public class CoreConstants
     {
-        public static string ComputerVisionApiSubscriptionKey = "YOUR_COMPUTER_VISION_API_KEY";
-        public static string CognitiveServicesRegion = "YOUR_REGION";
+        public static string ComputerVisionApiSubscriptionKey = "a1991ca3845044cc850936fa480cffff";
+        public static string CognitiveServicesRegion = "westcentralus";
         public static string CognitiveServicesBaseUrl = $"https://{CognitiveServicesRegion}.api.cognitive.microsoft.com";
 
 

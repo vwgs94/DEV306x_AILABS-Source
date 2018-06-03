@@ -17,9 +17,46 @@ namespace AIVisionExplorer
     {        
         public ImageInformation(Canvas detectionCanvas = null)
         {
-            DetectionCanvas = detectionCanvas;             
+            DetectionCanvas = detectionCanvas;
+            AnalyzeImageCommand = new RelayCommand(async () => { await AnalyzeImageAsync(); });
         }
-                
+
+        public async Task<bool> AnalyzeImageAsync()
+        {
+            bool successful = false;
+            this.IsBusy = true;
+
+            try
+            {
+                var analysis = await Helpers.ComputerVisionHelper.AnalyzeImageAsync(this.FileBytes);
+
+                this.Description = analysis.caption.ToFirstCharUpper();
+                this.Tags = new ObservableCollection<string>(analysis.tags);
+                this.IsClipart = Convert.ToBoolean(analysis.details.imageType.clipArtType);
+                this.IsLineDrawing = Convert.ToBoolean(analysis.details.imageType.lineDrawingType);
+                this.DominantColors = analysis.details.color.dominantColors.ToList();
+                this.AccentColor = new SolidColorBrush(($"#FF{analysis.details.color.accentColor}").GetColorFromHex());
+                this.ForegroundColor = analysis.details.color.dominantColorForeground;
+                this.BackgroundColor = analysis.details.color.dominantColorBackground;
+                this.IsAdult = analysis.details.adult.isAdultContent;
+                this.AdultScore = analysis.details.adult.adultScore;
+                this.IsRacy = analysis.details.adult.isRacyContent;
+                this.RacyScore = analysis.details.adult.racyScore;
+                this.ImageFormat = analysis.details.metadata.format.ToUpper();
+                this.ImageHeight = analysis.details.metadata.height;
+                this.ImageWidth = analysis.details.metadata.width;
+
+                successful = true;
+
+            }
+            catch (Exception ex)
+            {
+            }
+
+            this.IsBusy = false;
+            return successful;
+        }
+
         public ICommand AnalyzeImageCommand { get; private set; }
        
         private string _displayName;

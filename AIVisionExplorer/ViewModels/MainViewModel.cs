@@ -44,7 +44,41 @@ namespace AIVisionExplorer.ViewModels
 
         public async Task<bool> BrowseForImageAsync()
         {
-            return false;
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+
+            var file = await picker.PickSingleFileAsync();
+
+            if (file != null)
+            {
+                this.IsBusy = true;
+
+                var fileProperties = await file.Properties.GetImagePropertiesAsync();
+
+                byte[] imageBytes = await file.AsByteArrayAsync();
+
+                var image = new ImageInformation()
+                {
+                    DisplayName = file.DisplayName,
+                    Description = "(no description)",
+                    Tags = new ObservableCollection<string>(),
+                    FileBytes = imageBytes,
+                    Url = file.Path,
+                    ImageHeight = (int)fileProperties.Height,
+                    ImageWidth = (int)fileProperties.Width,
+                };
+
+                image.Url = await Helpers.StorageHelper.SaveToTemporaryFileAsync("VisionServices", file.Name, imageBytes);
+
+                this.CurrentImage = image;
+                this.IsBusy = false;
+            }
+
+            return file != null;
         }
 
         private void CourseSelectionChanged(object args)
